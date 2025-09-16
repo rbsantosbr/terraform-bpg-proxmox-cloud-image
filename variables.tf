@@ -30,3 +30,14 @@ variable "checksum_algorithm" {
   description = "The algorithm to calculate the checksum of the file. Must be md5 | sha1 | sha224 | sha256 | sha384 | sha512."
   default     = "sha256"
 }
+
+variable "overwrite" {
+  description = "Overwrite existing file."
+  type        = bool
+  default     = true
+}
+
+variable "decompression_algorithm" {
+  description = "Decompression algorithm to use. Supported values are 'gz', 'bz2', 'xz', 'zst'."
+  default     = null
+}
